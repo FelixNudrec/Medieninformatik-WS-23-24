@@ -34,10 +34,10 @@ class _SubjectScheduleWidgetState extends State<SubjectScheduleWidget> {
                 _buildDateTimeWidget('Vorlesung: ${_formatDateTime(widget.vorlesungDateTime)}', isVorlesungToday, Icons.school),
                 SizedBox(height: 3), // Space between Vorlesung and Übung
                 _buildDateTimeWidget('Übung: ${_formatDateTime(widget.ubungDateTime)}', isUbungToday, Icons.edit),
-                SizedBox(height: 3),
               ],
             ),
           ),
+          SizedBox(width: 3),
           ElevatedButton(
             onPressed: () {
               // Implement your logic here
