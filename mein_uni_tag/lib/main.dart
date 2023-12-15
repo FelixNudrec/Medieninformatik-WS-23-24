@@ -64,7 +64,10 @@ class Home extends StatelessWidget {
                     ),
                   ),
                 ),
-                Expanded(
+                Spacer(),
+                Container(
+                  width: 200, // Breite des Containers nach Bedarf ändern
+                  height: 200, // Höhe des Containers nach Bedarf ändern
                   child: Align(
                     alignment: Alignment.centerRight,
                     child: const AnalogClock(),
