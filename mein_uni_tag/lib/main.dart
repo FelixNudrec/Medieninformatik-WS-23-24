@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_analog_clock/flutter_analog_clock.dart';
 import 'package:intl/intl.dart';
 import 'widgets.dart';
+import 'package:intl/date_symbol_data_local.dart';
+
 
 void main() => runApp(MaterialApp(home: Home()));
 
@@ -120,14 +122,15 @@ class Home extends StatelessWidget {
   }
 
   String _getFormattedWeekday() {
-    var now = DateTime.now();
-    var formatter = DateFormat('EEEE');
-    String formattedDate = formatter.format(now);
-    return formattedDate;
+    final now = DateTime.now();
+    final formatter = DateFormat('EEEE');
+    return formatter.format(now);
   }
 
   String _getFormattedDate() {
-    return DateTime.now().toLocal().toString().split(' ')[0];
+    final now = DateTime.now();
+    final formatter = DateFormat('dd.MM.yyyy');
+    return formatter.format(now);
   }
 }
 
