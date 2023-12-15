@@ -31,9 +31,46 @@ class Home extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
           children: [
-            Align(
-              alignment: Alignment.centerRight,
-              child: const AnalogClock(),
+            Row(
+              children: [
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'Meine Kurse',
+                          style: TextStyle(
+                            color: Colors.indigo[900],
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                        TextSpan(
+                          text: '\nMatr.-Nr.: 123456789\n',
+                          style: TextStyle(
+                            color: Colors.black, // Farbe nach Bedarf ändern
+                            fontSize: 14,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Matr.-Nr.: 123456789',
+                          style: TextStyle(
+                            color: Colors.black, // Farbe nach Bedarf ändern
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: const AnalogClock(),
+                  ),
+                ),
+              ],
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -55,6 +92,20 @@ class Home extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
+            Align(
+              alignment: Alignment.topLeft,
+              child: RichText(
+                text: TextSpan(
+                  text: 'Meine Kurse',
+                  style: TextStyle(
+                    color: Colors.indigo[900],
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+            ),
+
             SubjectScheduleWidget(subjectName: 'Physics',vorlesungDateTime: DateTime(2023, 12, 10, 10, 0),ubungDateTime: DateTime(2023, 12, 12, 14, 0)),
             SubjectScheduleWidget(subjectName: 'Mathe',vorlesungDateTime: DateTime(2023, 15, 10, 10, 0),ubungDateTime: DateTime(2023, 15, 12, 14, 0)),
           ],
@@ -65,7 +116,10 @@ class Home extends StatelessWidget {
   }
 
   String _getFormattedWeekday() {
-    return DateTime.now().toLocal().weekday.toString();
+    var now = DateTime.now();
+    var formatter = DateFormat('EEEE');
+    String formattedDate = formatter.format(now);
+    return formattedDate;
   }
 
   String _getFormattedDate() {
