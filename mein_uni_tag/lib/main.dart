@@ -109,7 +109,7 @@ class Home extends StatelessWidget {
               ),
             ),
 
-            SubjectScheduleWidget(subjectName: 'Physics',vorlesungDateTime: DateTime(2023, 12, 10, 10, 0),ubungDateTime: DateTime(2023, 12, 12, 14, 0)),
+            SubjectScheduleWidget(subjectName: 'AUD',vorlesungDateTime: DateTime(2023, 12, 10, 10, 0),ubungDateTime: DateTime(2023, 12, 12, 14, 0)),
             SizedBox(height: 3),
             SubjectScheduleWidget(subjectName: 'Mathe',vorlesungDateTime: DateTime(2023, 15, 10, 10, 0),ubungDateTime: DateTime(2023, 15, 12, 14, 0)),
           ],

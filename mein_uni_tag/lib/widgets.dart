@@ -45,7 +45,7 @@ class _SubjectScheduleWidgetState extends State<SubjectScheduleWidget> {
             child: Text(widget.subjectName),
             style: ElevatedButton.styleFrom(
               primary: Colors.grey[300],
-              onPrimary: Colors.white,
+              onPrimary: Colors.black,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.zero,
               ),
