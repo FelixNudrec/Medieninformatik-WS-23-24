@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_analog_clock/flutter_analog_clock.dart';
 import 'package:intl/intl.dart';
+import 'widgets.dart';
 
 void main() => runApp(MaterialApp(home: Home()));
 
@@ -27,7 +28,8 @@ class Home extends StatelessWidget {
           ],
           backgroundColor: Colors.indigo[900],
         ),
-        body: Column(
+        body: SingleChildScrollView(
+          child: Column(
           children: [
             Align(
               alignment: Alignment.centerRight,
@@ -53,8 +55,10 @@ class Home extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-
+            SubjectScheduleWidget(subjectName: 'Physics',vorlesungDateTime: DateTime(2023, 12, 10, 10, 0),ubungDateTime: DateTime(2023, 12, 12, 14, 0)),
+            SubjectScheduleWidget(subjectName: 'Mathe',vorlesungDateTime: DateTime(2023, 15, 10, 10, 0),ubungDateTime: DateTime(2023, 15, 12, 14, 0)),
           ],
+        ),
         ),
       ),
     );
@@ -68,3 +72,5 @@ class Home extends StatelessWidget {
     return DateTime.now().toLocal().toString().split(' ')[0];
   }
 }
+
+
