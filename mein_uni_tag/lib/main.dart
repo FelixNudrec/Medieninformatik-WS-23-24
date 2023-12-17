@@ -41,7 +41,7 @@ class Home extends StatelessWidget {
                     text: TextSpan(
                       children: [
                         TextSpan(
-                          text: 'Meine Kurse',
+                          text: 'Meine Daten',
                           style: TextStyle(
                             color: Colors.indigo[900],
                             fontWeight: FontWeight.bold,
@@ -114,6 +114,10 @@ class Home extends StatelessWidget {
             SubjectScheduleWidget(subjectName: 'AUD',vorlesungDateTime: DateTime(2023, 12, 10, 10, 0),ubungDateTime: DateTime(2023, 12, 12, 14, 0)),
             SizedBox(height: 3),
             SubjectScheduleWidget(subjectName: 'Mathe',vorlesungDateTime: DateTime(2023, 15, 10, 10, 0),ubungDateTime: DateTime(2023, 15, 12, 14, 0)),
+            SizedBox(height: 3),
+            SubjectScheduleWidget(subjectName: 'EMF',vorlesungDateTime: DateTime(2023, 15, 10, 10, 0),ubungDateTime: DateTime(2023, 15, 12, 14, 0)),
+            SizedBox(height: 3),
+            SubjectScheduleWidget(subjectName: 'Robolab',vorlesungDateTime: DateTime(2023, 15, 10, 10, 0),ubungDateTime: DateTime(2023, 15, 12, 14, 0)),
           ],
         ),
         ),
